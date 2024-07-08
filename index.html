@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Rock, Paper and Scissors Game</h1>
+    <div class="items">
+        <div class="item"  onclick="computerChoice=generateComputerChoice();
+        result=getResult(computerChoice,'Rock');
+        changeMessage('Rock');
+        updateResult();">
+            <div class="image image1"></div>
+            <button >Rock</button>
+        </div>
+        <div class="item"  onclick="
+        computerChoice=generateComputerChoice();
+        result=getResult(computerChoice,'Paper');
+        changeMessage('Paper');
+        updateResult();
+        ">
+            <div class="image image2"></div>
+            <button>Paper</button>
+        </div>
+        <div class="item" onclick="
+        computerChoice=generateComputerChoice();
+        result=getResult(computerChoice,'Scissors');
+        changeMessage('Scissors');
+        updateResult();
+        ">
+            <div class="image image3"></div>
+            <button>Scissors</button>
+    
+        </div>
+    </div>
+    <div class="report">
+        <div class="message">Choose one of the above!</div>
+    <div class="all-content">
+        <div class="results">
+            <div class="result">
+                <div class="heading">Rounds Won</div>
+                <div class="number">0</div>
+            </div>
+            <div class="result">
+                <div class="heading"> Rounds Lost</div>
+                <div class="number">0</div>
+            </div>
+            <div class="result" style="border: none;">
+                <div class="heading">Rounds Tied</div>
+                <div class="number">0</div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
