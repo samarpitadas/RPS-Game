@@ -17,6 +17,10 @@ h1{
 .item{
     border: 2px solid cornflowerblue;
     border-radius: 5px;
+    transition-duration: 0.3s;
+}
+.item:hover {
+    box-shadow: 0 0 10px 3px cornflowerblue; /* Example: glowing border on hover */
 }
 button{
     background-color: black;
