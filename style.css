@@ -87,3 +87,47 @@ button:hover{
     align-items: center;
     justify-content: center;
 }
+@media only screen and (max-width: 540px) {
+    *{
+        font-size: 20px;
+    }
+    
+    .item {
+        margin-bottom: 20px; /* Add space between items when stacked */
+    }
+    
+    button {
+        margin: 5px; /* Reduce horizontal margin for buttons */
+        font-size: 20px;
+    }
+    
+    .message {
+        margin: 30px; /* Adjust margin for message on smaller screens */
+    }
+    
+    .image1, .image2, .image3 {
+        height: 100px;
+        width: 80px; /* Resize images for smaller screens */
+        margin: 10px; /* Adjust margin for images */
+    }
+    
+    .result {
+        padding: 5px 30px 5px; /* Adjust padding for results */
+    }
+    
+    .number {
+        padding: 20px; /* Adjust padding for number */
+    }
+}
+@media only screen and (max-width: 320px){
+    *{
+        font-size: 15px;
+    }
+    .items{
+        flex-direction: column;
+    }
+    .button{
+        margin: 5px; /* Reduce horizontal margin for buttons */
+        font-size: 15px;
+    }
+}
