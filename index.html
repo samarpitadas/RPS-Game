@@ -5,39 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors Game</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        #countdown {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-top: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  color: #3ca3d9;
+}
+
+    </style>
 </head>
 <body>
     <h1>Rock, Paper and Scissors Game</h1>
     <div class="items">
-        <div class="item"  onclick="computerChoice=generateComputerChoice();
-        result=getResult(computerChoice,'Rock');
-        changeMessage('Rock');
-        updateResult();">
+        <div class="item" onclick="
+        startCountdown();
+        setTimeout(function(){
+            computerChoice=generateComputerChoice();
+            result=getResult(computerChoice,'🪨');
+            changeMessage('🪨');
+            updateResult();
+        },3500);">
             <div class="image image1"></div>
             <button >Rock</button>
         </div>
         <div class="item"  onclick="
-        computerChoice=generateComputerChoice();
-        result=getResult(computerChoice,'Paper');
-        changeMessage('Paper');
-        updateResult();
-        ">
+        startCountdown();
+        setTimeout(function(){
+            computerChoice=generateComputerChoice();
+            result=getResult(computerChoice,'📃');
+            changeMessage('📃');
+            updateResult();
+        },3500);">
             <div class="image image2"></div>
             <button>Paper</button>
         </div>
         <div class="item" onclick="
-        computerChoice=generateComputerChoice();
-        result=getResult(computerChoice,'Scissors');
-        changeMessage('Scissors');
-        updateResult();
-        ">
+        startCountdown();
+        setTimeout(function(){
+            computerChoice=generateComputerChoice();
+            result=getResult(computerChoice,'✂️');
+            changeMessage('✂️');
+            updateResult();
+        },3500);">
             <div class="image image3"></div>
             <button>Scissors</button>
     
         </div>
     </div>
+    <div id="countdown" style="text-align: center;"></div>
     <div class="report">
         <div class="message">Choose one of the above!</div>
+        
     <div class="all-content">
         <div class="results">
             <div class="result">
@@ -56,7 +77,8 @@
     </div>
     </div>
     
-    <script src="script.js"></script>
+    <script src="script.js">
+    </script>
     
 </body>
 </html>
