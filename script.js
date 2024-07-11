@@ -10,36 +10,37 @@ let computerChoice;
 function generateComputerChoice() {
     let randomNumber=Math.random()*3;
     if(randomNumber>0 && randomNumber<=1){
-    return 'Rock';
+    return '🪨';
     }
     else if(randomNumber>1 && randomNumber<=2){
-    return'Paper';
+    return'📃';
     }
     else{
-    return'Scissors';
+    return'✂️';
     }
 }
 function getResult(computerChoice,userChoice) {
-    if(userChoice==='Rock'){
-        if(computerChoice==='Rock'){score.tie++; return 'You and Computer have a tie';}
-        if(computerChoice==='Paper'){score.lost++; return 'Computer won';}
-        if(computerChoice==='Scissors'){score.win++; return 'You won';}
+    if(userChoice==='🪨'){
+        if(computerChoice==='🪨'){score.tie++; return "There's a tie 🤝";}
+        if(computerChoice==='📃'){score.lost++; return 'YOU LOST 😢';}
+        if(computerChoice==='✂️'){score.win++; return 'YOU WON!! 🏆';}
     }
-    if(userChoice==='Paper'){
-        if(computerChoice==='Rock'){score.win++; return 'You won';}
-        if(computerChoice==='Paper'){score.tie++; return 'You and Computer have a tie';}
-        if(computerChoice==='Scissors'){score.lost++; return 'Computer won';}
+    if(userChoice==='📃'){
+        if(computerChoice==='🪨'){score.win++; return 'YOU WON!! 🏆';}
+        if(computerChoice==='📃'){score.tie++; return "There's a tie 🤝";}
+        if(computerChoice==='✂️'){score.lost++; return 'YOU LOST 😢';}
     }
-    if(userChoice==='Scissors'){
-        if(computerChoice==='Rock'){score.lost++; return 'Computer won';}
-        if(computerChoice==='Paper'){score.win++; return 'You won';}
-        if(computerChoice==='Scissors')score.tie++; {return 'You and Computer have a tie';}
+    if(userChoice==='✂️'){
+        if(computerChoice==='🪨'){score.lost++; return 'YOU LOST 😢';}
+        if(computerChoice==='📃'){score.win++; return 'YOU WON!! 🏆';}
+        if(computerChoice==='✂️')score.tie++; {return "There's a tie 🤝";}
     }
 }
 function changeMessage(s){
     let message=document.querySelector('.message');
     message.innerHTML=`
-    You chose ${s}. Computer chose ${computerChoice}. ${result}.
+    <div><pre>You :${s}   Computer :${computerChoice}</pre></div>
+    <div style="text-align: center">${result}</div>
     <h4>Play again!</h4>`;
 }
 function updateResult(){
