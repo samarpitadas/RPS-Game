@@ -85,3 +85,25 @@ function resetOp(){
         </div>
     </div>`;
 }
+function startCountdown() {
+    let countdownElement = document.getElementById('countdown');
+    countdownElement.style.opacity = 1;
+    
+    let count = 3;
+    countdownElement.textContent = count;
+  
+    let countdownInterval = setInterval(() => {
+      count--;
+      if (count == 2) {
+        countdownElement.textContent = count;
+        countdownElement.style.opacity=0.5;
+      } else {
+        countdownElement.textContent = '1';
+        countdownElement.style.opacity=0.2;
+        clearInterval(countdownInterval);
+        setTimeout(() => {
+          countdownElement.style.opacity = 0;
+        }, 1000); // Hide countdown after 1 second
+      }
+    }, 1000); // Update countdown every second
+  }
