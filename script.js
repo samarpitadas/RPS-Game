@@ -39,6 +39,7 @@ function getResult(computerChoice,userChoice) {
 function changeMessage(s){
     let message=document.querySelector('.message');
     message.innerHTML=`
+    <div id="countdown" style="text-align: center;"></div>
     <div><pre>You :${s}   Computer :${computerChoice}</pre></div>
     <div style="text-align: center">${result}</div>
     <h4>Play again!</h4>`;
@@ -68,7 +69,10 @@ function resetOp(){
     score.tie=0;
     let report=document.querySelector('.report');
     report.innerHTML=`
-    <div class="message">Choose one of the above!</div>
+    <div class="message">
+    <div id="countdown" style="text-align: center;"></div>
+    Choose one of the above!
+    </div>
     <div class="all-content">
         <div class="results">
             <div class="result">
