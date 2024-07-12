@@ -123,7 +123,7 @@ button:hover{
         padding: 20px; /* Adjust padding for number */
     }
 }
-@media only screen and (max-width: 320px){
+@media only screen and (max-width: 317px){
     *{
         font-size: 15px;
     }
